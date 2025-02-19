@@ -15,10 +15,10 @@
 //
 
 import UIKit
-//import FirebaseFirestore
-//import FirebaseAuth
-//import FirebaseAuthUI
-//import FirebaseEmailAuthUI
+import FirebaseFirestore
+import FirebaseAuth
+import FirebaseAuthUI
+import FirebaseEmailAuthUI
 import SDWebImage
 
 func priceString(from price: Int) -> String {

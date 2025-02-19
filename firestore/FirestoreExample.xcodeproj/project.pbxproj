@@ -43,6 +43,10 @@
 		8EB1D03F2633838500F8AD8E /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB1D03E2633838500F8AD8E /* SignInView.swift */; };
 		962164732D65B3A8008FA66E /* AppFrameworkModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9621646D2D65B3A8008FA66E /* AppFrameworkModule.framework */; };
 		962164742D65B3A8008FA66E /* AppFrameworkModule.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9621646D2D65B3A8008FA66E /* AppFrameworkModule.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		962164842D65BD79008FA66E /* RestaurantsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9621647F2D65BD79008FA66E /* RestaurantsTableViewController.swift */; };
+		962164852D65BD79008FA66E /* RestaurantListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9621647D2D65BD79008FA66E /* RestaurantListView.swift */; };
+		962164892D65BDFC008FA66E /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 962164882D65BDFC008FA66E /* FirebaseAuth */; };
+		9621648B2D65BDFC008FA66E /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 9621648A2D65BDFC008FA66E /* FirebaseFirestore */; };
 		DA3C6D5CCAE3BF02ED7A97A6 /* GoogleService-Info.plist in Sources */ = {isa = PBXBuildFile; fileRef = 6AA80A371E484FE3095D24C4 /* GoogleService-Info.plist */; };
 		DA5D6E6B3E69955807917A8E /* GoogleService-Info.plist in Sources */ = {isa = PBXBuildFile; fileRef = 6AA80A371E484FE3095D24C4 /* GoogleService-Info.plist */; };
 		DE8564AE23AFBF8000611383 /* FirestoreUITest.m in Sources */ = {isa = PBXBuildFile; fileRef = DE8564AD23AFBF8000611383 /* FirestoreUITest.m */; };
@@ -131,6 +135,8 @@
 		8E919E7E260D3956007C62C4 /* ReviewView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewView.swift; sourceTree = "<group>"; };
 		8EB1D03E2633838500F8AD8E /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		9621646D2D65B3A8008FA66E /* AppFrameworkModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AppFrameworkModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9621647D2D65BD79008FA66E /* RestaurantListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantListView.swift; sourceTree = "<group>"; };
+		9621647F2D65BD79008FA66E /* RestaurantsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantsTableViewController.swift; sourceTree = "<group>"; };
 		DE8564AC23AFBF8000611383 /* FirestoreExampleUITests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FirestoreExampleUITests-Bridging-Header.h"; sourceTree = "<group>"; };
 		DE8564AD23AFBF8000611383 /* FirestoreUITest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirestoreUITest.m; sourceTree = "<group>"; };
 		DE8564B023AFBFA700611383 /* FIREGHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FIREGHelper.h; sourceTree = "<group>"; };
@@ -141,29 +147,19 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		962164782D65B3A8008FA66E /* Exceptions for "AppFrameworkModule" folder in "AppFrameworkModule" target */ = {
+		962164782D65B3A8008FA66E /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
-				RestaurantListView.swift,
 				RestaurantListViewModel.swift,
-				RestaurantsTableViewController.swift,
 			);
 			publicHeaders = (
 				AppFrameworkModule.h,
 			);
 			target = 9621646C2D65B3A8008FA66E /* AppFrameworkModule */;
 		};
-		9621647A2D65B40F008FA66E /* Exceptions for "AppFrameworkModule" folder in "FirestoreExample" target */ = {
+		9621647B2D65B6C5008FA66E /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
-				RestaurantsTableViewController.swift,
-			);
-			target = 8D9BBC2C1EE2200900194E9A /* FirestoreExample */;
-		};
-		9621647B2D65B6C5008FA66E /* Exceptions for "AppFrameworkModule" folder in "FirestoreSwiftUIExample" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				RestaurantListView.swift,
 				RestaurantListViewModel.swift,
 			);
 			target = 8E4C62CD25E9CFE0001678A1 /* FirestoreSwiftUIExample */;
@@ -171,20 +167,7 @@
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		9621646E2D65B3A8008FA66E /* AppFrameworkModule */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				9621647A2D65B40F008FA66E /* Exceptions for "AppFrameworkModule" folder in "FirestoreExample" target */,
-				9621647B2D65B6C5008FA66E /* Exceptions for "AppFrameworkModule" folder in "FirestoreSwiftUIExample" target */,
-				962164782D65B3A8008FA66E /* Exceptions for "AppFrameworkModule" folder in "AppFrameworkModule" target */,
-			);
-			explicitFileTypes = {
-			};
-			explicitFolders = (
-			);
-			path = AppFrameworkModule;
-			sourceTree = "<group>";
-		};
+		9621646E2D65B3A8008FA66E /* AppFrameworkModule */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (9621647B2D65B6C5008FA66E /* PBXFileSystemSynchronizedBuildFileExceptionSet */, 962164782D65B3A8008FA66E /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = AppFrameworkModule; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -214,6 +197,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				962164892D65BDFC008FA66E /* FirebaseAuth in Frameworks */,
+				9621648B2D65BDFC008FA66E /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,6 +261,7 @@
 			isa = PBXGroup;
 			children = (
 				8D9BBC301EE2200900194E9A /* AppDelegate.swift */,
+				9621647F2D65BD79008FA66E /* RestaurantsTableViewController.swift */,
 				8DF77E191EEB45E500CB2330 /* RestaurantDetailViewController.swift */,
 				8D5DF7011F7EF3BA00B0D24F /* NewReviewViewController.swift */,
 				8D004D2C1EE879B5004DEF35 /* FiltersViewController.swift */,
@@ -336,6 +322,7 @@
 		8E4C62E125E9D137001678A1 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				9621647D2D65BD79008FA66E /* RestaurantListView.swift */,
 				8E4C62E625E9D191001678A1 /* RestaurantItemView.swift */,
 				8E919E7D260D3956007C62C4 /* RestaurantDetailView.swift */,
 				8E722C0A261CD4210047AA1A /* RestaurantHeaderView.swift */,
@@ -531,6 +518,10 @@
 				Base,
 			);
 			mainGroup = 8D9BBC241EE2200800194E9A;
+			packageReferences = (
+				962164872D65BDFC008FA66E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				9621648C2D65BF42008FA66E /* XCRemoteSwiftPackageReference "FirebaseUI-iOS" */,
+			);
 			productRefGroup = 8D9BBC2E1EE2200900194E9A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -605,6 +596,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				962164842D65BD79008FA66E /* RestaurantsTableViewController.swift in Sources */,
 				8D9BBC311EE2200900194E9A /* AppDelegate.swift in Sources */,
 				8DF1E3151EE72C4600192CDE /* LocalCollection.swift in Sources */,
 				8670CB2C286A218500070BC6 /* UINavigationBar+Extension.swift in Sources */,
@@ -640,6 +632,7 @@
 				8E919E81260D3956007C62C4 /* ReviewView.swift in Sources */,
 				8E4C63B225F05E76001678A1 /* StarsView.swift in Sources */,
 				8E39DB9326153D25009CC10E /* WriteReviewView.swift in Sources */,
+				962164852D65BD79008FA66E /* RestaurantListView.swift in Sources */,
 				8E919E77260D394C007C62C4 /* Review.swift in Sources */,
 				8E919E7F260D3956007C62C4 /* RestaurantImageView.swift in Sources */,
 				8E4C63E425F6D8C8001678A1 /* PriceView.swift in Sources */,
@@ -918,7 +911,6 @@
 		8D9BBC4E1EE2200900194E9A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = FirestoreExampleTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -936,7 +928,6 @@
 		8D9BBC4F1EE2200900194E9A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = FirestoreExampleTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1156,6 +1147,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		962164872D65BDFC008FA66E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.8.1;
+			};
+		};
+		9621648C2D65BF42008FA66E /* XCRemoteSwiftPackageReference "FirebaseUI-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/FirebaseUI-iOS";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 14.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		962164882D65BDFC008FA66E /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 962164872D65BDFC008FA66E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		9621648A2D65BDFC008FA66E /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 962164872D65BDFC008FA66E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8D9BBC251EE2200800194E9A /* Project object */;
 }
