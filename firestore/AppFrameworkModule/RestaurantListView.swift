@@ -18,7 +18,7 @@
 //
 
 import SwiftUI
-import FirebaseFirestore
+//import FirebaseFirestore
 
 struct RestaurantListView: View {
   @ObservedObject var restaurantListViewModel = RestaurantListViewModel()
