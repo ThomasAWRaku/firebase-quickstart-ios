@@ -50,6 +50,8 @@
 		962164A32D65D779008FA66E /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 962164A22D65D779008FA66E /* FirebaseFirestore */; };
 		962164B82D65E1E5008FA66E /* AppFrameworkModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9621646D2D65B3A8008FA66E /* AppFrameworkModule.framework */; };
 		962164B92D65E1E5008FA66E /* AppFrameworkModule.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9621646D2D65B3A8008FA66E /* AppFrameworkModule.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		963B45032D6EEA0E00A0297F /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 963B45022D6EEA0E00A0297F /* SDWebImage */; };
+		963B45062D6EEA2400A0297F /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 963B45052D6EEA2400A0297F /* SDWebImageSwiftUI */; };
 		DA3C6D5CCAE3BF02ED7A97A6 /* GoogleService-Info.plist in Sources */ = {isa = PBXBuildFile; fileRef = 6AA80A371E484FE3095D24C4 /* GoogleService-Info.plist */; };
 		DA5D6E6B3E69955807917A8E /* GoogleService-Info.plist in Sources */ = {isa = PBXBuildFile; fileRef = 6AA80A371E484FE3095D24C4 /* GoogleService-Info.plist */; };
 		DE8564AE23AFBF8000611383 /* FirestoreUITest.m in Sources */ = {isa = PBXBuildFile; fileRef = DE8564AD23AFBF8000611383 /* FirestoreUITest.m */; };
@@ -203,6 +205,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				963B45032D6EEA0E00A0297F /* SDWebImage in Frameworks */,
 				962164A02D65D4BF008FA66E /* FirebaseEmailAuthUI in Frameworks */,
 				962164732D65B3A8008FA66E /* AppFrameworkModule.framework in Frameworks */,
 				9621649A2D65D30D008FA66E /* FirebaseFirestore in Frameworks */,
@@ -222,6 +225,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				963B45062D6EEA2400A0297F /* SDWebImageSwiftUI in Frameworks */,
 				962164892D65BDFC008FA66E /* FirebaseAuth in Frameworks */,
 				962164B82D65E1E5008FA66E /* AppFrameworkModule.framework in Frameworks */,
 				9621648B2D65BDFC008FA66E /* FirebaseFirestore in Frameworks */,
@@ -538,6 +542,8 @@
 			packageReferences = (
 				962164872D65BDFC008FA66E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				9621648C2D65BF42008FA66E /* XCRemoteSwiftPackageReference "FirebaseUI-iOS" */,
+				963B45012D6EEA0E00A0297F /* XCRemoteSwiftPackageReference "SDWebImage" */,
+				963B45042D6EEA2400A0297F /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 8D9BBC2E1EE2200900194E9A /* Products */;
@@ -1191,6 +1197,22 @@
 				minimumVersion = 14.0.0;
 			};
 		};
+		963B45012D6EEA0E00A0297F /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.21.0;
+			};
+		};
+		963B45042D6EEA2400A0297F /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.1.3;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1228,6 +1250,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 962164872D65BDFC008FA66E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseFirestore;
+		};
+		963B45022D6EEA0E00A0297F /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 963B45012D6EEA0E00A0297F /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+		963B45052D6EEA2400A0297F /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 963B45042D6EEA2400A0297F /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
