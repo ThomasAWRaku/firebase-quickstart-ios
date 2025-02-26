@@ -19,6 +19,7 @@
 
 import FirebaseFirestore
 import Combine
+import AppFrameworkModule
 
 class RestaurantViewModel: ObservableObject {
   var restaurant: Restaurant

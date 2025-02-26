@@ -19,13 +19,22 @@
 
 import FirebaseFirestore
 
-struct Review: Identifiable, Codable {
-  var id: String = UUID().uuidString
+public struct Review: Identifiable, Codable {
+    public init(id: String = UUID().uuidString, rating: Int, userID: String, username: String, text: String, date: Timestamp) {
+        self.id = id
+        self.rating = rating
+        self.userID = userID
+        self.username = username
+        self.text = text
+        self.date = date
+    }
+    
+  public var id: String = UUID().uuidString
 
-  var rating: Int // Can also be enum
+  public var rating: Int // Can also be enum
   var userID: String
-  var username: String
-  var text: String
+  public var username: String
+  public var text: String
   var date: Timestamp
 
   enum CodingKeys: String, CodingKey {

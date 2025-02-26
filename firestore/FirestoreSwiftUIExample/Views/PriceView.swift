@@ -18,6 +18,7 @@
 //
 
 import SwiftUI
+import AppFrameworkModule
 
 struct PriceView: View {
   var price: Int

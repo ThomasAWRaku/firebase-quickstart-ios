@@ -19,6 +19,7 @@
 
 import SwiftUI
 import FirebaseFirestore
+import AppFrameworkModule
 
 struct RestaurantListView: View {
   @ObservedObject var restaurantListViewModel = RestaurantListViewModel()

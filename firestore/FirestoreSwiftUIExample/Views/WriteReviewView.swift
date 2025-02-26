@@ -20,6 +20,7 @@
 import SwiftUI
 import FirebaseAuth
 import FirebaseFirestore
+import AppFrameworkModule
 
 struct WriteReviewView: View {
   var restaurant: Restaurant

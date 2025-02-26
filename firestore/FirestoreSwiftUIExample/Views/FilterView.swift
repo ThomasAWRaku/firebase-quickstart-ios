@@ -18,6 +18,7 @@
 //
 
 import SwiftUI
+import AppFrameworkModule
 
 struct FilterView: View {
   var viewModel: RestaurantListViewModel

@@ -19,17 +19,29 @@
 
 import FirebaseFirestore
 
-struct Restaurant: Identifiable, Codable {
-  var id: String = UUID().uuidString
-  var reference: DocumentReference?
+public struct Restaurant: Identifiable, Codable {
+    public init(id: String = UUID().uuidString, reference: DocumentReference? = nil, name: String, category: String, city: String, price: Int, ratingCount: Int, averageRating: Float, photo: URL) {
+        self.id = id
+        self.reference = reference
+        self.name = name
+        self.category = category
+        self.city = city
+        self.price = price
+        self.ratingCount = ratingCount
+        self.averageRating = averageRating
+        self.photo = photo
+    }
 
-  var name: String
-  var category: String // Could become an enum
-  var city: String
-  var price: Int // from 1-3; could also be an enum
-  var ratingCount: Int // numRatings
-  var averageRating: Float
-  var photo: URL
+  public var id: String = UUID().uuidString
+  public var reference: DocumentReference?
+
+  public var name: String
+  public var category: String // Could become an enum
+  public var city: String
+  public var price: Int // from 1-3; could also be an enum
+  public var ratingCount: Int // numRatings
+  public var averageRating: Float
+  public var photo: URL
 
   enum CodingKeys: String, CodingKey {
     case reference

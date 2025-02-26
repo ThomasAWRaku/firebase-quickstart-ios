@@ -18,6 +18,7 @@
 //
 
 import SwiftUI
+import AppFrameworkModule
 
 struct RestaurantItemView: View {
   var restaurant: Restaurant

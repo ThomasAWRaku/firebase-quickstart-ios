@@ -18,6 +18,7 @@
 //
 
 import SwiftUI
+import AppFrameworkModule
 
 struct RestaurantHeaderView: View {
   var restaurant: Restaurant

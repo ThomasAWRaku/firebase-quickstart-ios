@@ -21,24 +21,30 @@ import Combine
 import FirebaseFirestore
 import SwiftUI
 
-class RestaurantListViewModel: ObservableObject {
-  @Published var restaurants = [Restaurant]()
+public class RestaurantListViewModel: ObservableObject {
+  @Published public var restaurants = [Restaurant]()
   private var db = Firestore.firestore()
   private var listener: ListenerRegistration?
   private let baseQuery: Query = Firestore.firestore().collection("restaurants").limit(to: 50)
+
+  public init(restaurants: [Restaurant] = [Restaurant](), db: Firestore = Firestore.firestore(), listener: (any ListenerRegistration)? = nil) {
+    self.restaurants = restaurants
+    self.db = db
+    self.listener = listener
+  }
 
   deinit {
     unsubscribe()
   }
 
-  func unsubscribe() {
+  public func unsubscribe() {
     if listener != nil {
       listener?.remove()
       listener = nil
     }
   }
 
-  func subscribe(to query: Query) {
+  public func subscribe(to query: Query) {
     if listener == nil {
       listener = query.addSnapshotListener { [weak self] querySnapshot, error in
         guard let documents = querySnapshot?.documents else {
@@ -61,12 +67,12 @@ class RestaurantListViewModel: ObservableObject {
     }
   }
 
-  func filter(query: Query) {
+  public func filter(query: Query) {
     unsubscribe()
     subscribe(to: query)
   }
 
-  func query(category: String?, city: String?, price: Int?, sortOption: String?) -> Query {
+  public func query(category: String?, city: String?, price: Int?, sortOption: String?) -> Query {
     var filteredQuery = baseQuery
 
     if let category = category {
@@ -88,7 +94,7 @@ class RestaurantListViewModel: ObservableObject {
     return filteredQuery
   }
 
-  func populate() {
+  public func populate() {
     db.populate()
   }
 }
