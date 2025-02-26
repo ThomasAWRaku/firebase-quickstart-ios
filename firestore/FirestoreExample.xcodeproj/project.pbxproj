@@ -250,13 +250,6 @@
 			path = FirestoreExampleUITests;
 			sourceTree = "<group>";
 		};
-		55E9B4214DCD676CF86B4D30 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
 		8D9BBC241EE2200800194E9A = {
 			isa = PBXGroup;
 			children = (
@@ -268,7 +261,6 @@
 				9621646E2D65B3A8008FA66E /* AppFrameworkModule */,
 				8D9BBC2E1EE2200900194E9A /* Products */,
 				6AA80A371E484FE3095D24C4 /* GoogleService-Info.plist */,
-				55E9B4214DCD676CF86B4D30 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
